@@ -3,8 +3,9 @@ var { atan2, chain, derivative, e, evaluate, log, pi, pow, round, sqrt, simplify
 var colors = require('colors');
 var {configuracion, configurar} = require('./configuracion')
 var {impuesto} = require('./impuesto')
+//var {impuesto} = require('./impuesto_sara')
 
-console.log("El impuesto de este monto es", impuesto(5000))
+console.log("El impuesto de este monto es", impuesto(100000))
 
 
 console.log(configuracion)
