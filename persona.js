@@ -1,3 +1,4 @@
+/*
 const personas = [
     {
         nombre: 'Luke',
@@ -27,6 +28,7 @@ const personas = [
         edad: 18 
     },
 ]
+*/
 
 class Persona {
     nombre=''
@@ -36,29 +38,29 @@ class Persona {
     telefono=''
     referencias=[]
     edad=0
+    pasosCaminados= 0
+    id= 0
 
-    constructor(nombre, apellido, referencias, edad){
+    constructor(nombre, apellido, referencias, edad, id){
         this.nombre = nombre
         this.apellido = apellido
         this.referencias = referencias
         this.nombreCompleto = this.nombre + ' ' + this.apellido
         this.edad = edad
+        this.id = id
     }
 
     saludar(){
         console.log("Hola, mi nombre es ", this.nombreCompleto)
     }
 
+    caminar(cantidadPasos){
+        this.pasosCaminados = this.pasosCaminados + cantidadPasos
+        //this.nombreCompleto + " Ha caminado " + this.pasosCaminados + " pasos"
+        console.log(`${this.nombreCompleto} ha caminado ${this.pasosCaminados} pasos`)
+        //backtick
+    }
+
 }
 
-const persona1 = new Persona('Luke', 'Skywalker', [], 25)
-const persona2 = new Persona('Leia', 'Organa', [], 18)
-
-console.log(persona1)
-
-console.log(persona1.nombreCompleto)
-
-persona1.saludar()
-persona2.saludar()
-
-//console.log(personas)
+module.exports = Persona
